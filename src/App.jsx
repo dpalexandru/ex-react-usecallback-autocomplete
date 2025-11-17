@@ -1,7 +1,20 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 
 function App() {
+  //stati
+  const [listaProdotti, setLisitaProdotti] = useState([])
+  const [search, setSearch] = useState("")
+
+
+  //chiamata api lista prodotti
+  useEffect(() => {
+    fetch("http://localhost:3333/products?search=ma")
+      .then(res => res.json())
+      .then(data => console.log(data))
+      .catch(err => console.error(err))
+
+  }, [])
 
   return (
     <>
