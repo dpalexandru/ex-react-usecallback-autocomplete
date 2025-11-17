@@ -25,6 +25,7 @@ main {
   max-width: 600px;
   margin: 40px auto;
   text-align: center;
+  position: "relative"
 }
 
 /* Input ricerca */
@@ -32,13 +33,10 @@ main {
   width: 100%;
   padding: 12px 15px;
   font-size: 1rem;
-
   background: #000;
   border: 2px solid #ff00c8;
   border-radius: 6px;
-
   color: #ff00c8;
-
   outline: none;
   transition: 0.25s;
 }
@@ -51,4 +49,28 @@ main {
 .campo-ricerca:focus {
   box-shadow: 0 0 10px #ff00c8;
   border-color: #ff00f4;
+}
+
+/* Tendina */
+.tendina {
+  text-align: left;
+  margin-top: 4px;
+  list-style: none;
+  border: 1px solid #ff2bbc;
+  border-radius: 6px;
+  background: white;
+  max-height: 450px;
+  overflow-y: auto;
+  position: absolute;
+  width: 450px;
+  z-index: 1;
+}
+
+.tendina li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.tendina li:hover {
+  background: #f2f2f2;
 }
